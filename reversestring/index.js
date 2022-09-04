@@ -15,6 +15,10 @@ function reverse(str) {
   return newArr.join('');
 }
 
+function reverseTwo(str) {
+  return str.split('').reverse().join('');
+}
+
 module.exports = reverse;
 console.log;
 reverse('apple');
