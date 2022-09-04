@@ -19,6 +19,17 @@ function reverseTwo(str) {
   return str.split('').reverse().join('');
 }
 
+function reverseThree(str) {
+  let reversed = '';
+
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+  return reversed;
+}
+
+function reverseFour(str) {
+  return str.split('').reduce((reversed, character) => character + reversed, '');
+}
+
 module.exports = reverse;
-console.log;
-reverse('apple');
