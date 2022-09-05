@@ -12,6 +12,13 @@ function palindrome(str) {
   console.log(reverse);
   return str === reverse;
 }
-palindrome('hello');
+
+function palindromeTwo(str) {
+  return str.split('').every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
+}
+
+palindromeTwo('allo');
 
 module.exports = palindrome;
