@@ -29,7 +29,10 @@ function reverseThree(str) {
 }
 
 function reverseFour(str) {
-  return str.split('').reduce((reversed, character) => character + reversed, '');
+  debugger;
+  return str
+    .split('')
+    .reduce((reversed, character) => character + reversed, '');
 }
-
+reverseFour('abcdefg');
 module.exports = reverse;
