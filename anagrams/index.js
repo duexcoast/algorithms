@@ -9,24 +9,25 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  const strA = stringA.replace(/[^\w]/g);
-  const strB = stringB.replace(/[^\w]/g);
+  charMapA = buildCharMap(stringA);
+  charMapB = buildCharMap(stringB);
 
-  if (strA.length !== strB.length) return false;
+  if (Object.keys(charMapA).length !== Object.keys(charMapB).length)
+    return false;
 
-  const mapA = {};
-  const mapB = {};
-
-  for (let char of strA) {
-    mapA[char] ? mapA[char]++ : (mapA[char] = 1);
-  }
-  for (let char of strB) {
-    mapB[char] ? mapB[char]++ : (mapB[char] = 1);
-  }
-  for (let elem in mapA) {
-    if (mapA[elem] !== mapB[elem]) return false;
+  for (let char in charMapA) {
+    if (charMapA[char] !== charMapB[char]) return false;
   }
   return true;
+}
+
+function buildCharMap(str) {
+  const charMap = {};
+
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+  return charMap;
 }
 anagrams('helium', 'hydraulics');
 module.exports = anagrams;
