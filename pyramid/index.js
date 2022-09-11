@@ -20,8 +20,6 @@
 //      '#######'
 
 function pyramid(n) {
-  const counter = 1;
-  const max = n + n - 1;
   for (let height = 0; height < n; height++) {
     let str = '';
     for (let length = 0; length < max; length++) {
