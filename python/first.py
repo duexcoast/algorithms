@@ -11,9 +11,3 @@
 #     print("your first number was bigger")
 # else:
 #     print("your second number was bigger")
-
-mysum = 0
-
-for i in range(6, 10, 2):
-    mysum += i
-    print(mysum)
