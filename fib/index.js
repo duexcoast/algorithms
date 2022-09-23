@@ -17,4 +17,3 @@ function fib(n) {
 }
 
 fib(5);
-module.exports = fib;
