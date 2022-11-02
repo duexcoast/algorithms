@@ -140,11 +140,29 @@ class LinkedList<T> {
     }
     return null;
   }
+
+  reorderStudents(D) {
+    const n = D.size / 2;
+    let a = D.head;
+    for (let i = 0; i < n; i++) {
+      a = a?.next;
+    }
+    const b: ListNode<T> | null = a?.next;
+    let x_p = a;
+    let x: ListNode<T> | null = b;
+    // let x_n;
+    for (let i = 0; i < n; i++) {
+      let x_n = x?.next;
+      x!.next = x_p;
+      x_p = x;
+      x = x_n;
+    }
+  }
 }
 
 const ll = new LinkedList();
 ll.push(22);
-ll.push('conor');
+ll.push(12);
 ll.unshift(11);
 ll.getAtIndex(3);
 
