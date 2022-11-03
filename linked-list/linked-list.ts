@@ -155,7 +155,7 @@ class LinkedList<T> {
       let x_n = x?.next;
       x!.next = x_p;
       x_p = x;
-      x = x_n;
+      x = x_n!;
     }
   }
 }
