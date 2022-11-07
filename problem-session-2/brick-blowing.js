@@ -1,3 +1,4 @@
+// O(n^2) complexity
 function getDamages(A) {
   const damages = [];
   let i = 0;
