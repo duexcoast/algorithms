@@ -1,6 +1,7 @@
 // Guarantees search space is at least 3 in each step
 // Useful for comparing middle to both left & right neighbors in 
 // each step when making narrowing decisions.
+
 // Post processing required.  Loop ends when there is two elements left (< not <=)
 // so you need to make a final decision after the loop.
 
