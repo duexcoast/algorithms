@@ -3,8 +3,8 @@
 // Useful when you need to make that comparison to decide whether
 // to go left or right when narrowing.
 
-// Post processing is required, the loop ends when there is one element left, 
-// but we need to ensure that that element meets the condition. 
+// Post processing is required, the loop ends when there is one element left,
+// but we need to ensure that that element meets the condition.
 function binarySearchII(arr: number[], target: number): number {
   if (arr.length === 0) return -1;
 
