@@ -6,7 +6,9 @@ function countingSort(arr) {
   for (let elem of arr) {
     count[elem] += 1;
   }
+
   let j = 0;
+
   for (let i = 0; i < arr.length; i++) {
     while (count[i] > 0) {
       arr[j] = i;
@@ -14,6 +16,7 @@ function countingSort(arr) {
       count[i]--;
     }
   }
+
   console.log(arr);
   return arr;
 }
